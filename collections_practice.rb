@@ -38,9 +38,10 @@ def merge_data(array_of_name_hashes, array_of_full_hashes) #|[{first_name => "bl
     name_hash.each do |label, name_value| #first name,blake
       array_of_full_hashes.each do |full_hash|# blake => {height: 10,  weight: 10}
         full_hash.each do |name_key, stats| #blake, {height:10, weight:10}
-          binding.pry
           if name_key == name_value
             indiv_new_hash = {}
+            binding.pry
+
             indiv_new_hash[label] = name_value
             stats.each do |k, v|
               indiv_new_hash[k] = v
