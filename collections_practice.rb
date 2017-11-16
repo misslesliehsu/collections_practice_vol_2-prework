@@ -52,3 +52,16 @@ def merge_data(array_of_name_hashes, array_of_full_hashes) #|[{first_name => "bl
   end
   merged_array_of_hashes
 end
+
+def find_cool(cool) #array of collections of hashes, where one key is coolness
+  answer = []
+  cool.each do |hash_set|
+    hash_set.each do |k, v|
+      if v == "cool"
+        answer << hash_set
+      end
+    end
+  end
+  answer
+end        
+        
