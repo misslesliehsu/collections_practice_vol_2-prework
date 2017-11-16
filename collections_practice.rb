@@ -75,6 +75,7 @@ def organized_schools(schools) #hash of schools => hashed locations (eg location
         organized[location_value] << name_key
       else
         organized[location_value] = school_array
+      end
     end
   end
   organized
