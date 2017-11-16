@@ -36,12 +36,12 @@ def merge_data(array_of_name_hashes, array_of_full_hashes) #|[{first_name => "bl
   merged_array_of_hashes = []
   array_of_name_hashes.each do |label, name| #first name, blake
     array_of_full_hashes.each do |key, value|# blake, {height: 10,  weight: 10}
-      if key == name
+      binding.pry
+        if key == name
         indiv_new_hash[label] = name
         value.each do |k, v|
           indiv_new_hash[k] = v
         end
-        binding.pry
         merged_array_of_hashes<< indiv_new_hash
       end
     end
