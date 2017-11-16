@@ -32,11 +32,24 @@ def count_elements(array_of_hashes)#array of hash objects
   count.uniq
 end
 
-def merge_data(keys, data) #|[{first_name => "blake"}, {first_name => "ashley"}], [datas]|
-  keys.each do |x|
-    x.merge(data)
-  binding.pry
+def merge_data(array_of_name_hashes, array_of_full_hashes) #|[{first_name => "blake"}, {first_name => "ashley"}], [datas]|
+  merged_array_of_hashes = []
+  array_of_name_hashes.each do |label, name| #first name, blake
+    array_of_full_hashes.each do |key, value|# blake, {height: 10,  weight: 10}
+      if key == name
+        indiv_new_hash[label] = name
+        value.each do |k, v|
+          indiv_new_hash[k] = v
+        end
+        merged_array_of_hashes<< indiv_new_hash
+      end
+    end
+  end
 end
+
+        
+        
+      
 =begin
   answer = []
   keys.each do |k, v| #|first_name, "blake"|
