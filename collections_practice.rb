@@ -47,9 +47,9 @@ def merge_data(array_of_name_hashes, array_of_full_hashes) #|[{first_name => "bl
   end
 end
 
-        
-        
-      
+
+
+
 =begin
   answer = []
   keys.each do |k, v| #|first_name, "blake"|
