@@ -70,7 +70,7 @@ def organize_schools(schools) #hash of schools => hashed locations (eg location:
   schools.each do |name_key, hashed_location| #flatiron => {location: NYC}
     school_array = []
     school_array << name_key
-    hashed.each do |labeloflocation, location_value|
+    hashed_location.each do |labeloflocation, location_value|
       if organized.includes?(location_value)
         organized[location_value] << name_key
       else
