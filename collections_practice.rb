@@ -63,5 +63,5 @@ def find_cool(cool) #array of collections of hashes, where one key is coolness
     end
   end
   answer
-end        
+end
         
