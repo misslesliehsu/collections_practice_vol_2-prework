@@ -71,7 +71,7 @@ def organize_schools(schools) #hash of schools => hashed locations (eg location:
     school_array = []
     school_array << name_key
     hashed_location.each do |labeloflocation, location_value|
-      if organized.includes?(location_value)
+      if organized.include?(location_value)
         organized[location_value] << name_key
       else
         organized[location_value] = school_array
