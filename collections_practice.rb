@@ -64,4 +64,19 @@ def find_cool(cool) #array of collections of hashes, where one key is coolness
   end
   answer
 end
-        
+
+def organized_schools(schools) #hash of schools => hashed locations (eg location: NYC)
+  organized = {}  #hash of locations => array of schools there
+  schools.each do |name_key, hashed_location| #flatiron => {location: NYC}
+    school_array = []
+    school_array << name_key
+    hashed.each do |labeloflocation, location_value|
+      if organized.includes?(location_value)
+        organized[location_value] << name_key
+      else
+        organized[location_value] = school_array
+    end
+  end
+end
+
+    
