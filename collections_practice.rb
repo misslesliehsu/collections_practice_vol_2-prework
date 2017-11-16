@@ -50,5 +50,6 @@ def merge_data(array_of_name_hashes, array_of_full_hashes) #|[{first_name => "bl
       end
     end
     merged_array_of_hashes
+    binding.pry
   end
 end
